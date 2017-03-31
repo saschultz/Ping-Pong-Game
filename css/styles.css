@@ -1,5 +1,15 @@
 .jumbotron {
-  text-align: center;
+  text-align: right;
+  background-image: url("../img/header.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 340px;
+  color: white;
+}
+.jumbotron h1 {
+  font-size: 49px;
+  font-weight: bolder;
 }
 input {
   max-width: 400px;

@@ -16,13 +16,14 @@ var numberToRange = function(number) {
     $("#result").prepend("<li>" + rangeArray + "</li>");
   };
 };
-
 //Front-End Logic:
 $(document).ready(function() {
   $("#formOne").submit(function(event) {
     var userInput = parseInt($("#userNumber").val());
     var output = numberToRange(userInput);
-    // $("#result").prepend("<li>" + resultArray + "</li>");
     event.preventDefault();
+  });
+  $(".reload").click(function() {
+  window.location.reload(true);
   });
 });
