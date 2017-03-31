@@ -5,15 +5,15 @@ var numberToRange = function(number) {
     var rangeArray = [rangeString];
     rangeArray.forEach(function(number) {
       if (rangeArray % 15 === 0) {
-        rangeArray.splice(0, 1, "Ping-Pong");
+        rangeArray.splice(0, 1, "Ping-Pong!");
       } else if (rangeArray % 3 === 0) {
-        rangeArray.splice(0, 1, "Ping");
+        rangeArray.splice(0, 1, "Ping!");
       } else if (rangeArray % 5 === 0) {
-        rangeArray.splice(0, 1, "Pong");
+        rangeArray.splice(0, 1, "Pong!");
       } else {
       }
     });
-    $("#result").prepend("<li>" + rangeArray + "</li>");
+    $("#result").append("<li>" + rangeArray + "</li>");
   };
 };
 //Front-End Logic:
