@@ -3,9 +3,16 @@ var countNumber = function(number) {
   for(var i=1; i<=number; i++) {
     var resultString = result =+ i;
     $("#result").prepend("<li>" + resultString + "</li>");
-    console.log(resultString);
+
     if (resultString % 3 === 0) {
-      alert("There is a number divisible by three!")
+      alert("There is a number divisible by three!");
+
+      result = "ping";
+      $("#result").prepend("<li>" + result + "</li>");
+      console.log(result);
+
+
+      //When condition is true, I want the code to replce that number with the string "ping"
     } else {
 
     }
