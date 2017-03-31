@@ -17,12 +17,15 @@ var countNumber = function(number) {
   };
 };
 
+
+
 //Front-End Logic:
 $(document).ready(function() {
   $("#formOne").submit(function(event) {
     var userInput = parseInt($("#userNumber").val());
     var output = countNumber(userInput);
-    // $("#result").prepend("<li>" + output + "</li>");
+    // $("#result").prepend("<li>" + resultArray + "</li>");
     event.preventDefault();
-  })
+  });
+  // location.reload();
 });
