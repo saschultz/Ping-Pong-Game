@@ -5,7 +5,7 @@
 #### By Sara Schultz
 
 ## Description
-
+This program is a game of ping pong that you play with numbers! It was created to demonstrate understanding of arrays, looping, and branching in JavaScript. When the user enters a number, the program will return the range from 1 to user's inputted number. When the range is displayed; numbers divisible by 3 will be replaced with the word "Ping!", numbers divisible by 5 will be replaced with the word "Pong!", and numbers divisible by 15 will be replaced with the words "Ping-Pong!"
 
 ## Specifications
 | Behavior | Input | Output |
@@ -21,15 +21,26 @@
 
 ## Setup/Installation Requirements
 
+* Copy the URL for this repository: https://github.com/saschultz/Ping-Pong-Game
+* Open terminal and use command: Git clone (followed by the repo URL link)
+* Change into cloned directory
+* Open index.html to view webpage in browser of preference
+* Open code in text editor of your choice (originally written in Atom)
 
 ## Known Bugs
 
+There are no known bugs, however I would like to go back and remove the reload button. I would like to implement a more user friendly way for the previous number range to be removed so that there is only one button and if the user resubmits the form, it will only display the most recent number entry.
 
 ## Support and contact details
 
-
+For questions, concerns, or ideas contact Sara: saschultz95@gmail.com
 
 ## Technologies Used
 
+HTML, Bootstrap, CSS, JavaScript, jQuery-3.2.0
 
 ### License
+
+Open Source.
+
+Copyright (c) 2017 **Sara Schultz**
