@@ -1,21 +1,14 @@
 //Back-End Logic:
 var countNumber = function(number) {
   for(var i=1; i<=number; i++) {
-    var resultString = result =+ i;
-    $("#result").prepend("<li>" + resultString + "</li>");
-
-    if (resultString % 3 === 0) {
-      alert("There is a number divisible by three!");
-
-      result = "ping";
-      $("#result").prepend("<li>" + result + "</li>");
-      console.log(result);
-
-
-      //When condition is true, I want the code to replce that number with the string "ping"
-    } else {
-
-    }
+    var resultString = (result =+ i);
+    var resultArray = [resultString];
+    resultArray.forEach(function(number) {
+      if (resultArray % 3 === 0) {
+        resultArray.splice(0, 1, "PING");
+      }
+    });
+    $("#result").prepend("<li>" + resultArray + "</li>");
   };
 };
 
