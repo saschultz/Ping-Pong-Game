@@ -6,6 +6,10 @@ var countNumber = function(number) {
     resultArray.forEach(function(number) {
       if (resultArray % 3 === 0) {
         resultArray.splice(0, 1, "PING");
+      } else if (resultArray % 5 === 0) {
+        resultArray.splice(0, 1, "PONG");
+      } else {
+
       }
     });
     $("#result").prepend("<li>" + resultArray + "</li>");
