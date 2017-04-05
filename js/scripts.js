@@ -1,7 +1,7 @@
 //Back-End Logic:
 var numberToRange = function(number) {
   for(var i=1; i<=number; i++) {
-    var rangeString = (result =+ i);
+    var rangeString = result =+ i;
     var rangeArray = [rangeString];
     rangeArray.forEach(function(number) {
       if (rangeArray % 15 === 0) {
@@ -11,19 +11,19 @@ var numberToRange = function(number) {
       } else if (rangeArray % 5 === 0) {
         rangeArray.splice(0, 1, "Pong!");
       } else {
+        number;
       }
     });
-    $("#result").append("<li>" + rangeArray + "</li>");
+    var finalOutput = $("#result").append("<li>" + rangeArray + "</li>");
   };
 };
 //Front-End Logic:
 $(document).ready(function() {
   $("#formOne").submit(function(event) {
+    $("#result").empty();
     var userInput = parseInt($("#userNumber").val());
     var output = numberToRange(userInput);
     event.preventDefault();
-  });
-  $(".reload").click(function() {
-  window.location.reload(true);
+    $("#result").text(finalOutput);
   });
 });
