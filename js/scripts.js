@@ -1,6 +1,7 @@
 //Back-End Logic:
+var finalOutput = [];
 var numberToRange = function(range) {
-  var finalOutput = [];
+
   var range;
   for(var i=1; i<=range; i++) {
       if ((i % 15) === 0) {
@@ -20,14 +21,9 @@ $(document).ready(function() {
   $("#formOne").submit(function(event) {
     event.preventDefault();
     var userInput = parseInt($("#userNumber").val());
-    $("#result").empty();
     var outputs = numberToRange(userInput);
-    console.log(outputs);
-    // console.log(outputs);
-    // outputs.forEach(function(output) {
-    //   $("#result").append("<li>" + output + "</li>");
-    //   console.log(outputs);
-    // });
-    // $("#result").text(finalOutput);
+    outputs.forEach(function(output) {
+      $("#result").append("<li>" + output + "</li>");
+    });
   });
 });
