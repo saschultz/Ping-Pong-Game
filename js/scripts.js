@@ -19,11 +19,14 @@ var numberToRange = function(range) {
 //Front-End Logic:
 $(document).ready(function() {
   $("#formOne").submit(function(event) {
+    $("#result").empty();
     event.preventDefault();
     var userInput = parseInt($("#userNumber").val());
     var outputs = numberToRange(userInput);
-    outputs.forEach(function(output) {
+    finalOutput.forEach(function(output) {
       $("#result").append("<li>" + output + "</li>");
     });
+    finalOutput = [];
+    this.reset();
   });
 });
