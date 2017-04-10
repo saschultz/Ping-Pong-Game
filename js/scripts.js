@@ -1,29 +1,33 @@
 //Back-End Logic:
-var numberToRange = function(number) {
-  for(var i=1; i<=number; i++) {
-    var rangeString = result =+ i;
-    var rangeArray = [rangeString];
-    rangeArray.forEach(function(number) {
-      if (rangeArray % 15 === 0) {
-        rangeArray.splice(0, 1, "Ping-Pong!");
-      } else if (rangeArray % 3 === 0) {
-        rangeArray.splice(0, 1, "Ping!");
-      } else if (rangeArray % 5 === 0) {
-        rangeArray.splice(0, 1, "Pong!");
+var numberToRange = function(range) {
+  var finalOutput = [];
+  var range;
+  for(var i=1; i<=range; i++) {
+      if ((i % 15) === 0) {
+        finalOutput.push("Ping-Pong");
+      } else if ((i % 3) === 0) {
+        finalOutput.push("Ping");
+      } else if ((i % 5) === 0) {
+        finalOutput.push("Pong");
       } else {
-        number;
+        finalOutput.push(i);
       }
-    });
-    var finalOutput = $("#result").append("<li>" + rangeArray + "</li>");
-  };
+    };
+  return finalOutput;
 };
 //Front-End Logic:
 $(document).ready(function() {
   $("#formOne").submit(function(event) {
-    $("#result").empty();
-    var userInput = parseInt($("#userNumber").val());
-    var output = numberToRange(userInput);
     event.preventDefault();
-    $("#result").text(finalOutput);
+    var userInput = parseInt($("#userNumber").val());
+    $("#result").empty();
+    var outputs = numberToRange(userInput);
+    console.log(outputs);
+    // console.log(outputs);
+    // outputs.forEach(function(output) {
+    //   $("#result").append("<li>" + output + "</li>");
+    //   console.log(outputs);
+    // });
+    // $("#result").text(finalOutput);
   });
 });
